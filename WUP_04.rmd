@@ -24,7 +24,12 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 # Methods
 
-In order to analyze the results we will use a box plot to compare the means of WORDSUM scores given the level of a persons schooling degree. We will also use the My tricks file to convert the categories into factor variables.
+In order to analyze the results we will use a box plot to compare the median of WORDSUM scores given the level of a persons schooling degree. We will also use the My tricks file to convert the categories into factor variables.
+
+```{r eval=FALSE}
+writeup4data <- writeup4data %>%
+mutate(across(where(is.character), as.factor))
+```
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
 # Results
@@ -34,6 +39,11 @@ In order to analyze the results we will use a box plot to compare the means of W
 ## Descriptive Results
 
 ### Graphical Descriptive Results
+```{r}
+boxplot(WORDSUM~DEGREE,data=writeup4data)
+```
+
+
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
