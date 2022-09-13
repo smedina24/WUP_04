@@ -43,11 +43,16 @@ mutate(across(where(is.character), as.factor))
 boxplot(WORDSUM~DEGREE,data=writeup4data)
 ```
 
-
+The box plot demonstrates a statistical difference between the Wordsum scores of students in Lt High School and those in Graduate school.If we were to align the results from the Lt High School;while, maintaining it's same altitude with the results form those in Graduate school into the same column the two results would not intersect with each other. Thus, indicating a statistical difference between Lt High School and Graduate School Wordsum scores. 
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ### Numerical Descriptive Results
+
+
+```{r}
+favstats(WORDSUM~DEGREE,data=writeup4data)
+```
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
