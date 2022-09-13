@@ -64,6 +64,7 @@ model1 <- aov(WORDSUM~DEGREE,data=writeup4data)
 summary.aov(model1)
 ```
 
+The P value for the Degrees of Students and their WORDSUM scores is 0.000236.This p value is extremely low and allows us to reject the idea that there is a Statistical differences between the Wordsome score of Students with different degree levels.
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 
