@@ -11,7 +11,7 @@ output:
 require(knitr)
 require(tidyverse)
 require(tigerstats)
-
+writeup4data <- read.csv(file="GSScsv.csv")
 ```
 
 # Introduction
@@ -24,6 +24,7 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 # Methods
 
+In order to analyze the results we will use a box plot to compare the means of WORDSUM scores given the level of a persons schooling degree. We will also use the My tricks file to convert the categories into factor variables.
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
 # Results
