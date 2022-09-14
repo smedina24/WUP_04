@@ -24,7 +24,7 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 # Methods
 
-In order to analyze the results we will use a box plot to compare the median of WORDSUM scores given the level of a persons schooling degree. We will also use the My tricks file to convert the categories into factor variables.
+In order to analyze the results we will use a box plot to compare the median of WORDSUM scores given the level of a persons schooling degree. We will also use the My tricks file to convert the categories into factor variables. 
 
 ```{r eval=FALSE}
 writeup4data <- writeup4data %>%
@@ -64,7 +64,14 @@ model1 <- aov(WORDSUM~DEGREE,data=writeup4data)
 summary.aov(model1)
 ```
 
-The P value for the Degrees of Students and their WORDSUM scores is 0.000236.This p value is extremely low and allows us to reject the idea that there is a Statistical differences between the Wordsome score of Students with different degree levels.
+The P value for the Degrees of Students and their WORDSUM scores is 0.000236.This p value is extremely low and allows us to reject the idea that there is no Statistical differences between the Wordsome score of Students and their degree levels. A TukeyHSD test will be ran to see if a statistical difference can be found between the WORDSUM SCORES of at least two levels of Degrees.
+
+
+```{r}
+#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
+par(mar = c(3, 20, 2, 2))
+plot(TukeyHSD(model1,conf.level = 0.95),las=2)
+```
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 
