@@ -78,4 +78,5 @@ The TukeyHSD test shows with a 95 percent confidence level that all the WORDSUM 
 
 # Discussion and Conclusion
 
+Lt High School is different from Graduate School. The pr value is 0.000236 this is the chance that all the WORDSUM scores would be the same;therefore, since the number is incredibly low we reject the idea that all the WORDSUM scores are the same for each group.
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
